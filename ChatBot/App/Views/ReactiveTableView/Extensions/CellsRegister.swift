@@ -2,9 +2,6 @@
 //  CellsRegister.swift
 //  ReactiveTableView
 //
-//  Created by Esteban on 18/03/2020.
-//  Copyright © 2020 Selfcode. All rights reserved.
-//
 
 import UIKit
 

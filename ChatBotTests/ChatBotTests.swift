@@ -2,8 +2,6 @@
 //  ChatBotTests.swift
 //  ChatBotTests
 //
-//  Created by Esteban on 18/11/2020.
-//
 
 import XCTest
 @testable import ChatBot

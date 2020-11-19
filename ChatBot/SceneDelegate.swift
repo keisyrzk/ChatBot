@@ -2,8 +2,6 @@
 //  SceneDelegate.swift
 //  ChatBot
 //
-//  Created by Esteban on 18/11/2020.
-//
 
 import UIKit
 

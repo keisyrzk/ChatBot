@@ -4,6 +4,7 @@
 //
 
 import Foundation
+import Combine
 
 class ChatRoom {
     
@@ -23,7 +24,7 @@ class ChatRoom {
     }
     
     var receivedMessage: ChatMessageData {
-        messagesData.last!
+        return messagesData.last ?? ChatMessageData(user: roomType.users.first!, messageType: .text(""))
     }
 }
 
