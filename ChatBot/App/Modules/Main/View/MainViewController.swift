@@ -24,7 +24,28 @@ class MainViewController: UIViewController {
         handleRx()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.setSections(sections: self!.viewModel.generateSections())
+        }
+    }
+    
     private func handleRx() {
+        
+        tableView.customActionsObservable
+            .sink { [unowned self] (action) in
+                switch action {
+                case let .SelectedRoom(chatRoom):
+                    DispatchQueue.main.async {
+                        ChatBuilder.pushIn(navigator: self.navigationController!, chatRoom: chatRoom)
+                    }
+                    
+                default:
+                    break
+                }
+            }
+            .dispose()
         
         oneOnOneButton.tapPublisher
             .sink { (_) in

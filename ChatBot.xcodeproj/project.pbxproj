@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5B0EF6032566B50F00363B18 /* ChatRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0EF6012566B50F00363B18 /* ChatRoomCell.swift */; };
 		5B0EF6042566B50F00363B18 /* ChatRoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B0EF6022566B50F00363B18 /* ChatRoomCell.xib */; };
+		5B0EF60B2566E4E500363B18 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0EF60A2566E4E500363B18 /* Delegate.swift */; };
 		5B1B767525665E5700A4142F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B767425665E5700A4142F /* String.swift */; };
 		5B1B767A25665EFE00A4142F /* ChatServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B767925665EFE00A4142F /* ChatServices.swift */; };
 		5B1B7682256693E100A4142F /* ChatBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B7681256693E100A4142F /* ChatBot.swift */; };
@@ -85,6 +86,7 @@
 /* Begin PBXFileReference section */
 		5B0EF6012566B50F00363B18 /* ChatRoomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomCell.swift; sourceTree = "<group>"; };
 		5B0EF6022566B50F00363B18 /* ChatRoomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatRoomCell.xib; sourceTree = "<group>"; };
+		5B0EF60A2566E4E500363B18 /* Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
 		5B1B767425665E5700A4142F /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		5B1B767925665EFE00A4142F /* ChatServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatServices.swift; sourceTree = "<group>"; };
 		5B1B7681256693E100A4142F /* ChatBot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBot.swift; sourceTree = "<group>"; };
@@ -406,6 +408,7 @@
 				5B3E1BF525659EB0002EE447 /* Editing.swift */,
 				5B3E1BF725659EB0002EE447 /* Datasource.swift */,
 				5B3E1BF925659EB0002EE447 /* CellsRegister.swift */,
+				5B0EF60A2566E4E500363B18 /* Delegate.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -642,6 +645,7 @@
 				5B3E1B7925659D6B002EE447 /* CombineTextView.swift in Sources */,
 				5B3E1B6B25659D6B002EE447 /* UISwitch+Combine.swift in Sources */,
 				5B3E1B7325659D6B002EE447 /* UIDatePicker+Combine.swift in Sources */,
+				5B0EF60B2566E4E500363B18 /* Delegate.swift in Sources */,
 				5B3E1C4D25659EB0002EE447 /* GenericTableAction.swift in Sources */,
 				5B3E1C4F25659EB0002EE447 /* Editing.swift in Sources */,
 				5B3E1C832565A15C002EE447 /* MessageType.swift in Sources */,
