@@ -18,7 +18,9 @@ class ChatViewModel {
         
         let items: [GenericSectionItem] = chatRoom.messagesData.map{ .ChatMessageItem(title: String.randomAlphanumeric(),
                                                                                       chatMessageData: $0) }
-        return [GenericSectionModel.WithoutHeader(title: "chatRoom", items: items)]
+        return [GenericSectionModel.WithoutHeader(title: "chatRoom",
+                                                  items: items,
+                                                  canEdit: false)]
     }
     
     func createMessageItem(chatMessageData: ChatMessageData) -> GenericSectionItem {

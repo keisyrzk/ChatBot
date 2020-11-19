@@ -41,6 +41,11 @@ class MainViewController: UIViewController {
                         ChatBuilder.pushIn(navigator: self.navigationController!, chatRoom: chatRoom)
                     }
                     
+                case let .DeleteItem(index: indexPath):
+                    if let room = self.tableView.sectionsObservable.value[indexPath.section].items[indexPath.row].data as? ChatRoom {
+                        ChatServices.shared.close(room: room)
+                    }
+                    
                 default:
                     break
                 }
