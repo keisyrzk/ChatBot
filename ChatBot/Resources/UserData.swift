@@ -19,7 +19,7 @@ struct UserData {
 
         var names = UserData.names
         var users = [UserData.meUser]
-        users.append(contentsOf: Array(1...Int.random(in: 1...UserData.names.count - 1))
+        users.append(contentsOf: Array(2...Int.random(in: 1...UserData.names.count - 1))
                         .map{ _ in ChatBot(name: names.remove(at: Int.random(in: 0...names.count - 1))) })        
         return users
     }
