@@ -7,13 +7,13 @@ import UIKit
 
 class ChatBuilder {
     
-    static func pushIn(navigator: UINavigationController, chatRoomType: ChatRoomType) {
+    static func pushIn(navigator: UINavigationController, chatRoom: ChatRoom) {
         
-        let viewModel = ChatViewModel(chatRoomType: chatRoomType)
+        let viewModel = ChatViewModel(chatRoom: chatRoom)
         
         let viewController = ChatViewController()
         viewController.assignDependencies(viewModel: viewModel)
-        viewController.title = chatRoomType.title
+        viewController.title = chatRoom.roomType.title
         
         navigator.pushViewController(viewController, animated: true)
     }

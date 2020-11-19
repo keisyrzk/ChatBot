@@ -27,6 +27,15 @@ enum ChatRoomType {
             return id
         }
     }
+    
+    var users: [User] {
+        switch self {
+        case let .oneOnOne(users, _):
+            return users
+        case let .oneToMany(users, _):
+            return users
+        }
+    }
 }
 
 extension ChatRoomType: Hashable {

@@ -8,14 +8,18 @@ import Combine
 
 class ChatViewModel {
     
-    let chatRoomType: ChatRoomType
+    let chatRoom: ChatRoom
     
-    init(chatRoomType: ChatRoomType) {
-        self.chatRoomType = chatRoomType
+    init(chatRoom: ChatRoom) {
+        self.chatRoom = chatRoom
     }
     
-//    func generateSections() -> AnyPublisher<[GenericSectionModel], Never> {
-//        
-//        let sections = [GenericSectionModel.WithoutHeader(title: "chatRoom", items: <#T##[GenericSectionItem]#>)]
-//    }
+    func initSections() -> [GenericSectionModel] {
+        return [GenericSectionModel.WithoutHeader(title: "chatRoom", items: [])]
+    }
+    
+    func createMessageItem(chatMessageData: ChatMessageData) -> GenericSectionItem {
+        return GenericSectionItem.ChatMessageItem(title: String.randomAlphanumeric(),
+                                                  chatMessageData: chatMessageData)
+    }
 }

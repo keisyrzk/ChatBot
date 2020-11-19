@@ -20,15 +20,14 @@ struct UserData {
     static var generatedOneToManyUsers: [User] {
 
         var names = UserData.names
-        var users = Array(1...Int.random(in: 1...UserData.names.count - 1))
-            .map{ _ in User(name: names.remove(at: Int.random(in: 0...names.count - 1))) }
-        users.append(UserData.meUser)
-        
+        var users = [UserData.meUser]
+        users.append(contentsOf: Array(1...Int.random(in: 1...UserData.names.count - 1))
+                        .map{ _ in ChatBot(name: names.remove(at: Int.random(in: 0...names.count - 1))) })        
         return users
     }
     
     static var generatedOneOnOneUsers: [User] {
-        return [User(name: UserData.names[Int.random(in: 0...UserData.names.count - 1)]),
+        return [ChatBot(name: UserData.names[Int.random(in: 0...UserData.names.count - 1)]),
                 UserData.meUser]
     }
 }
