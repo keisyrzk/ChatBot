@@ -9,19 +9,26 @@ import Foundation
 
 struct UserData {
     
-    private static let names = ["Esteban", "Zia", "Natalie", "Bob", "Chris", "Tao"]
+    private static let names = ["Leo", "Zia", "Natalie", "Bob", "Chris", "Tao"]
     
     /**
         Return a random number of randomly named users
      */
-    static var generatedUsers: [User] {
+    
+    private static let meUser = User(name: "Esteban", isMe: true)
+    
+    static var generatedOneToManyUsers: [User] {
 
         var names = UserData.names
-        return Array(1...Int.random(in: 1...UserData.names.count - 1))
+        var users = Array(1...Int.random(in: 1...UserData.names.count - 1))
             .map{ _ in User(name: names.remove(at: Int.random(in: 0...names.count - 1))) }
+        users.append(UserData.meUser)
+        
+        return users
     }
     
-    static var generatedUser: User {
-        return User(name: UserData.names[Int.random(in: 0...UserData.names.count - 1)])
+    static var generatedOneOnOneUsers: [User] {
+        return [User(name: UserData.names[Int.random(in: 0...UserData.names.count - 1)]),
+                UserData.meUser]
     }
 }

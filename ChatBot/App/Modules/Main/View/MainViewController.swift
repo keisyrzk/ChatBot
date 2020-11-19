@@ -22,13 +22,17 @@ class MainViewController: UIViewController {
         
         oneOnOneButton.tapPublisher
             .sink { (_) in
-                ChatBuilder.pushIn(navigator: self.navigationController!, chatType: .oneOnOne(UserData.generatedUser))
+                ChatBuilder.pushIn(navigator: self.navigationController!,
+                                   chatRoomType: ChatServices.shared.createRoom(roomType: .oneOnOne(users: UserData.generatedOneOnOneUsers,
+                                                                                                    roomId: String.randomAlphanumeric())))
             }
             .dispose()
         
         oneToManyButton.tapPublisher
             .sink { (_) in
-                ChatBuilder.pushIn(navigator: self.navigationController!, chatType: .oneToMany(UserData.generatedUsers))
+                ChatBuilder.pushIn(navigator: self.navigationController!,
+                                   chatRoomType: ChatServices.shared.createRoom(roomType: .oneToMany(users: UserData.generatedOneToManyUsers,
+                                                                                                     roomId: String.randomAlphanumeric())))
             }
             .dispose()
     }

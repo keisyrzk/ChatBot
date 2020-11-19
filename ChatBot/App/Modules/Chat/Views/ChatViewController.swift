@@ -2,13 +2,14 @@
 //  ChatViewController.swift
 //  ChatBot
 //
-//  Created by Esteban on 18/11/2020.
-//
 
 import UIKit
+import Combine
 
 class ChatViewController: UIViewController {
 
+    @IBOutlet weak var tableView: ReactiveTableView!
+    
     private var viewModel: ChatViewModel!
     
     func assignDependencies(viewModel: ChatViewModel) {
@@ -18,6 +19,11 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        handleRx()
+    }
+    
+    private func handleRx() {
+        
+        
     }
 }

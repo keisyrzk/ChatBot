@@ -4,12 +4,18 @@
 //
 
 import Foundation
+import Combine
 
 class ChatViewModel {
     
-    let chatType: ChatType
+    let chatRoomType: ChatRoomType
     
-    init(chatType: ChatType) {
-        self.chatType = chatType
+    init(chatRoomType: ChatRoomType) {
+        self.chatRoomType = chatRoomType
     }
+    
+//    func generateSections() -> AnyPublisher<[GenericSectionModel], Never> {
+//        
+//        let sections = [GenericSectionModel.WithoutHeader(title: "chatRoom", items: <#T##[GenericSectionItem]#>)]
+//    }
 }

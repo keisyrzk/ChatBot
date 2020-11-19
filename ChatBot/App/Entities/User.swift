@@ -8,8 +8,10 @@ import Foundation
 class User {
     
     var name: String
+    var isMe: Bool
     
-    init(name: String) {
+    init(name: String, isMe: Bool = false) {
         self.name = name
+        self.isMe = isMe
     }
 }

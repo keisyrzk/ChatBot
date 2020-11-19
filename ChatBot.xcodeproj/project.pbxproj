@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B1B767525665E5700A4142F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B767425665E5700A4142F /* String.swift */; };
+		5B1B767A25665EFE00A4142F /* ChatServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B767925665EFE00A4142F /* ChatServices.swift */; };
 		5B3E1AF625659726002EE447 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E1AF525659726002EE447 /* AppDelegate.swift */; };
 		5B3E1AF825659726002EE447 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E1AF725659726002EE447 /* SceneDelegate.swift */; };
 		5B3E1AFD25659726002EE447 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3E1AFB25659726002EE447 /* Main.storyboard */; };
@@ -14,7 +16,7 @@
 		5B3E1B0225659727002EE447 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3E1B0025659727002EE447 /* LaunchScreen.storyboard */; };
 		5B3E1B0D25659727002EE447 /* ChatBotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E1B0C25659727002EE447 /* ChatBotTests.swift */; };
 		5B3E1B1825659727002EE447 /* ChatBotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E1B1725659727002EE447 /* ChatBotUITests.swift */; };
-		5B3E1B33256597F2002EE447 /* ChatType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E1B32256597F2002EE447 /* ChatType.swift */; };
+		5B3E1B33256597F2002EE447 /* ChatRoomType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E1B32256597F2002EE447 /* ChatRoomType.swift */; };
 		5B3E1B3B25659834002EE447 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E1B3A25659834002EE447 /* User.swift */; };
 		5B3E1B41256598E0002EE447 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E1B40256598E0002EE447 /* UserData.swift */; };
 		5B3E1B6925659D6B002EE447 /* CombineReadme.md in Resources */ = {isa = PBXBuildFile; fileRef = 5B3E1B4D25659D6B002EE447 /* CombineReadme.md */; };
@@ -76,6 +78,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B1B767425665E5700A4142F /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		5B1B767925665EFE00A4142F /* ChatServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatServices.swift; sourceTree = "<group>"; };
 		5B3E1AF225659726002EE447 /* ChatBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B3E1AF525659726002EE447 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B3E1AF725659726002EE447 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,7 +93,7 @@
 		5B3E1B1325659727002EE447 /* ChatBotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatBotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B3E1B1725659727002EE447 /* ChatBotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotUITests.swift; sourceTree = "<group>"; };
 		5B3E1B1925659727002EE447 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5B3E1B32256597F2002EE447 /* ChatType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatType.swift; sourceTree = "<group>"; };
+		5B3E1B32256597F2002EE447 /* ChatRoomType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomType.swift; sourceTree = "<group>"; };
 		5B3E1B3A25659834002EE447 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5B3E1B40256598E0002EE447 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		5B3E1B4D25659D6B002EE447 /* CombineReadme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CombineReadme.md; sourceTree = "<group>"; };
@@ -228,7 +232,7 @@
 				5B3E1B3A25659834002EE447 /* User.swift */,
 				5B3E1C822565A15C002EE447 /* MessageType.swift */,
 				5B3E1C872565A1F5002EE447 /* ChatMessageData.swift */,
-				5B3E1B32256597F2002EE447 /* ChatType.swift */,
+				5B3E1B32256597F2002EE447 /* ChatRoomType.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -236,6 +240,7 @@
 		5B3E1B2D256597AE002EE447 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5B1B767925665EFE00A4142F /* ChatServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 		5B3E1B30256597BF002EE447 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5B1B767425665E5700A4142F /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -580,6 +586,7 @@
 				5B3E1B7125659D6B002EE447 /* UITextView+Combine.swift in Sources */,
 				5B3E1B7225659D6B002EE447 /* UIScrollView+Combine.swift in Sources */,
 				5B3E1C5325659EB0002EE447 /* CellsRegister.swift in Sources */,
+				5B1B767A25665EFE00A4142F /* ChatServices.swift in Sources */,
 				5B3E1B7A25659D6B002EE447 /* CombineOtherProperty.swift in Sources */,
 				5B3E1CB82565A6CE002EE447 /* MainViewController.swift in Sources */,
 				5B3E1C5125659EB0002EE447 /* Datasource.swift in Sources */,
@@ -594,12 +601,13 @@
 				5B3E1CA72565A661002EE447 /* MainBuilder.swift in Sources */,
 				5B3E1B7825659D6B002EE447 /* AnyCancellable+DisposeBag.swift in Sources */,
 				5B3E1B7525659D6B002EE447 /* UITextField+Combine.swift in Sources */,
+				5B1B767525665E5700A4142F /* String.swift in Sources */,
 				5B3E1B7425659D6B002EE447 /* UIRefreshControl+Combine.swift in Sources */,
 				5B3E1AF825659726002EE447 /* SceneDelegate.swift in Sources */,
 				5B3E1B3B25659834002EE447 /* User.swift in Sources */,
 				5B3E1B7C25659D6B002EE447 /* CombineControlProperty.swift in Sources */,
 				5B3E1C4B25659EB0002EE447 /* GenericSectionItem.swift in Sources */,
-				5B3E1B33256597F2002EE447 /* ChatType.swift in Sources */,
+				5B3E1B33256597F2002EE447 /* ChatRoomType.swift in Sources */,
 				5B3E1CCB2565A947002EE447 /* ChatViewModel.swift in Sources */,
 				5B3E1B7B25659D6B002EE447 /* CancellableBag.swift in Sources */,
 				5B3E1B7025659D6B002EE447 /* UISegmentedControl+Combine.swift in Sources */,
