@@ -10,6 +10,7 @@
 		5B0EF6032566B50F00363B18 /* ChatRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0EF6012566B50F00363B18 /* ChatRoomCell.swift */; };
 		5B0EF6042566B50F00363B18 /* ChatRoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B0EF6022566B50F00363B18 /* ChatRoomCell.xib */; };
 		5B0EF60B2566E4E500363B18 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0EF60A2566E4E500363B18 /* Delegate.swift */; };
+		5B0EF6102567005A00363B18 /* Scrolling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0EF60F2567005A00363B18 /* Scrolling.swift */; };
 		5B1B767525665E5700A4142F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B767425665E5700A4142F /* String.swift */; };
 		5B1B767A25665EFE00A4142F /* ChatServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B767925665EFE00A4142F /* ChatServices.swift */; };
 		5B1B7682256693E100A4142F /* ChatBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B7681256693E100A4142F /* ChatBot.swift */; };
@@ -87,6 +88,7 @@
 		5B0EF6012566B50F00363B18 /* ChatRoomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomCell.swift; sourceTree = "<group>"; };
 		5B0EF6022566B50F00363B18 /* ChatRoomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatRoomCell.xib; sourceTree = "<group>"; };
 		5B0EF60A2566E4E500363B18 /* Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
+		5B0EF60F2567005A00363B18 /* Scrolling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scrolling.swift; sourceTree = "<group>"; };
 		5B1B767425665E5700A4142F /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		5B1B767925665EFE00A4142F /* ChatServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatServices.swift; sourceTree = "<group>"; };
 		5B1B7681256693E100A4142F /* ChatBot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBot.swift; sourceTree = "<group>"; };
@@ -409,6 +411,7 @@
 				5B3E1BF725659EB0002EE447 /* Datasource.swift */,
 				5B3E1BF925659EB0002EE447 /* CellsRegister.swift */,
 				5B0EF60A2566E4E500363B18 /* Delegate.swift */,
+				5B0EF60F2567005A00363B18 /* Scrolling.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -619,6 +622,7 @@
 				5B3E1B7A25659D6B002EE447 /* CombineOtherProperty.swift in Sources */,
 				5B3E1CB82565A6CE002EE447 /* MainViewController.swift in Sources */,
 				5B3E1C5125659EB0002EE447 /* Datasource.swift in Sources */,
+				5B0EF6102567005A00363B18 /* Scrolling.swift in Sources */,
 				5B3E1B6F25659D6B002EE447 /* UIButton+Combine.swift in Sources */,
 				5B3E1C882565A1F5002EE447 /* ChatMessageData.swift in Sources */,
 				5B3E1B6D25659D6B002EE447 /* UIPageControl+Combine.swift in Sources */,

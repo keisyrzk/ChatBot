@@ -42,6 +42,7 @@ class ChatViewController: UIViewController {
                     DispatchQueue.main.async {
                         self.tableView.append(items: [self.viewModel.createMessageItem(chatMessageData: chatRoom.receivedMessage)],
                                               toSection: 0)
+                        self.tableView.scrollToBottom()
                     }
                 }
             }
