@@ -18,7 +18,9 @@ class MainBuilder {
         
         let navigator = UINavigationController()
                 
+        let viewModel = MainViewModel()
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! MainViewController
+        vc.assignDependencies(viewModel: viewModel)
         vc.title = "MAIN"
         
         navigator.show(vc, sender: nil)

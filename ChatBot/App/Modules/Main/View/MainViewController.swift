@@ -8,9 +8,15 @@ import Combine
 
 class MainViewController: UIViewController {
 
+    @IBOutlet weak var tableView: ReactiveTableView!
     @IBOutlet weak var oneOnOneButton: UIButton!
     @IBOutlet weak var oneToManyButton: UIButton!
     
+    private var viewModel: MainViewModel!
+    
+    func assignDependencies(viewModel: MainViewModel) {
+        self.viewModel = viewModel
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

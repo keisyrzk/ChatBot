@@ -10,6 +10,7 @@ enum GenericSectionItem {
 
     // Cells
     case ChatMessageItem(title: String, chatMessageData: ChatMessageData)
+    case ChatRoomItem(title: String, chatRoom: ChatRoom)
 }
 
 extension GenericSectionItem: Equatable {
@@ -19,12 +20,15 @@ extension GenericSectionItem: Equatable {
 
         case .ChatMessageItem(title: _, chatMessageData: let data):
             return data
+        case .ChatRoomItem(title: _, chatRoom: let data):
+            return data
         }
     }
     
     var title: String {
         switch self {
         case
+            .ChatRoomItem(title: let title, chatRoom: _),
             .ChatMessageItem(title: let title, chatMessageData: _):
             
             return title
@@ -40,6 +44,8 @@ extension GenericSectionItem: Equatable {
         switch original {
         case let .ChatMessageItem(title: _, chatMessageData: chatMessageData):
             self = .ChatMessageItem(title: id, chatMessageData: chatMessageData)
+        case let .ChatRoomItem(title: _, chatRoom: chatRoom):
+            self = .ChatRoomItem(title: id, chatRoom: chatRoom)
         }
     }
 }
@@ -51,6 +57,13 @@ extension GenericSectionItem {
         
         if case let .ChatMessageItem(title: titlel, chatMessageData: _) = other {
             guard case let .ChatMessageItem(title: titler, chatMessageData: _) = self else {
+                return false
+            }
+            return titlel == titler
+        }
+        
+        if case let .ChatRoomItem(title: titlel, chatRoom: _) = other {
+            guard case let .ChatRoomItem(title: titler, chatRoom: _) = self else {
                 return false
             }
             return titlel == titler
@@ -67,6 +80,10 @@ func == (lhs: GenericSectionItem, rhs: GenericSectionItem) -> Bool {
 
     case (let .ChatMessageItem(title: titlel, chatMessageData: _), let .ChatMessageItem(title: titler, chatMessageData: _)):
         return titlel == titler
+    case (let .ChatRoomItem(title: titlel, chatRoom: _), let .ChatRoomItem(title: titler, chatRoom: _)):
+        return titlel == titler
+    default:
+        return lhs.identity == rhs.identity
     }
 }
 

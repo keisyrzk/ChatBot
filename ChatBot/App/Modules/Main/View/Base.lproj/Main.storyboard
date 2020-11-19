@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uC1-Yh-pIV">
-                                <rect key="frame" x="131.5" y="393" width="151" height="120"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uC1-Yh-pIV">
+                                <rect key="frame" x="46" y="64" width="322" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4t-9i-Tbv">
                                         <rect key="frame" x="0.0" y="0.0" width="151" height="50"/>
@@ -27,7 +27,7 @@
                                         <state key="normal" title="New One on One chat"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EwG-B5-ggV">
-                                        <rect key="frame" x="0.0" y="70" width="151" height="50"/>
+                                        <rect key="frame" x="171" y="0.0" width="151" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="rTM-zg-fYL"/>
                                         </constraints>
@@ -35,17 +35,26 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="RET-fi-VdQ" customClass="ReactiveTableView" customModule="ChatBot" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="134" width="414" height="728"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="uC1-Yh-pIV" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="if6-LN-5up"/>
+                            <constraint firstItem="uC1-Yh-pIV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="M59-Da-zJd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RET-fi-VdQ" secondAttribute="trailing" id="WZb-3g-Voy"/>
+                            <constraint firstItem="RET-fi-VdQ" firstAttribute="top" secondItem="uC1-Yh-pIV" secondAttribute="bottom" constant="20" id="Zba-4F-Cjd"/>
+                            <constraint firstItem="RET-fi-VdQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="caz-ui-cNq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RET-fi-VdQ" secondAttribute="bottom" id="eGk-ll-M0w"/>
                             <constraint firstItem="uC1-Yh-pIV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="n8S-ax-GHt"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="oneOnOneButton" destination="w4t-9i-Tbv" id="zEf-Ll-Wij"/>
                         <outlet property="oneToManyButton" destination="EwG-B5-ggV" id="fir-Ah-RQs"/>
+                        <outlet property="tableView" destination="RET-fi-VdQ" id="0Ew-Po-qtT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

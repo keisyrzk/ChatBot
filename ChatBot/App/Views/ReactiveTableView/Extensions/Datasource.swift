@@ -31,6 +31,12 @@ extension ReactiveTableView: UITableViewDataSource {
             cell.configure(chatMessageData: chatMessageData)
             
             return cell
+            
+        case let .ChatRoomItem(title: _, chatRoom: chatRoom):
+            let cell = tableView.dequeueReusableCell(withIdentifier: ReactiveTableView.ChatRoomCellID, for: indexPath) as! ChatRoomCell
+            cell.configure(chatRoom: chatRoom)
+            
+            return cell
         }
     }
 }

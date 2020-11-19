@@ -2,8 +2,6 @@
 //  ChatMessageCell.swift
 //  ChatBot
 //
-//  Created by Esteban on 18/11/2020.
-//
 
 import UIKit
 
@@ -17,7 +15,7 @@ class ChatMessageCell: UITableViewCell {
         
         switch chatMessageData.messageType {
         case let .text(text):
-            messageLabel.text = text
+            messageLabel.text = "[\(chatMessageData.user.name)]\n\(text)"
         }
         
     }

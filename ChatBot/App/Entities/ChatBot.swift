@@ -34,7 +34,7 @@ class ChatBot: User {
         Get random text to send
      */
     var randomText: String {
-        return textsCopy.remove(at: Int.random(in: 0...ChatBot.texts.count - 1))
+        return textsCopy.remove(at: Int.random(in: 0...textsCopy.count - 1))
     }
     
     /**

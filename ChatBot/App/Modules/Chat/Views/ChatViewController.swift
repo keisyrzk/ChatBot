@@ -11,6 +11,7 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var tableView: ReactiveTableView!
     
     private var viewModel: ChatViewModel!
+    private var didReceiveMessageCancellable: Cancellable?
     
     func assignDependencies(viewModel: ChatViewModel) {
         self.viewModel = viewModel
@@ -23,6 +24,11 @@ class ChatViewController: UIViewController {
         handleRx()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        didReceiveMessageCancellable?.cancel()
+    }
+    
     private func setup() {
         
         tableView.setSections(sections: viewModel.initSections())
@@ -30,7 +36,7 @@ class ChatViewController: UIViewController {
     
     private func handleRx() {
         
-        ChatServices.shared.didReceiveMessage
+        didReceiveMessageCancellable = ChatServices.shared.didReceiveMessage
             .sink { [unowned self] (chatRoom) in
                 if chatRoom.id == self.viewModel.chatRoom.id {
                     DispatchQueue.main.async {
@@ -39,6 +45,5 @@ class ChatViewController: UIViewController {
                     }
                 }
             }
-            .dispose()
     }
 }
