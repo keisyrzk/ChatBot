@@ -38,6 +38,15 @@ class ChatServices {
         }
     }
     
+    func restartBots(for room: ChatRoom) {
+        
+        room.roomType.users.forEach { (user) in
+            if !user.isMe {
+                (user as! ChatBot).restart()
+            }
+        }
+    }
+    
     // MARK: Services
     
     struct Requests {

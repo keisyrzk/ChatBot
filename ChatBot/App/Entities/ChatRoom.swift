@@ -26,6 +26,10 @@ class ChatRoom {
     var receivedMessage: ChatMessageData {
         return messagesData.last ?? ChatMessageData(user: roomType.users.first!, messageType: .text(""))
     }
+    
+    var meUser: User {
+        return roomType.users.first(where: { $0.isMe == true })!
+    }
 }
 
 extension ChatRoom: Hashable {

@@ -65,6 +65,13 @@ class ChatBot: User {
     
     func deactivate() {
         timer?.invalidate()
+        textsCopy = ChatBot.texts
+    }
+    
+    func restart() {
+        deactivate()
+        currentMessagesCount = 0
+        scheduleTimer()
     }
     
     private func scheduleTimer() {

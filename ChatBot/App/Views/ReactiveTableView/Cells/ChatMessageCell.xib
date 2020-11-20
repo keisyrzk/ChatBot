@@ -19,11 +19,11 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mzC-yB-7UL">
                         <rect key="frame" x="10" y="5" width="300" height="74"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yZ8-f5-IPm" customClass="ChatBubbleView" customModule="ChatBot" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yZ8-f5-IPm">
                                 <rect key="frame" x="40" y="5" width="220" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFO-Nj-GdJ">
-                                        <rect key="frame" x="20" y="10" width="180" height="44"/>
+                                        <rect key="frame" x="20" y="20" width="180" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -31,10 +31,10 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="dFO-Nj-GdJ" firstAttribute="top" secondItem="yZ8-f5-IPm" secondAttribute="top" constant="10" id="4xA-dE-AMN"/>
+                                    <constraint firstItem="dFO-Nj-GdJ" firstAttribute="top" secondItem="yZ8-f5-IPm" secondAttribute="top" constant="20" id="4xA-dE-AMN"/>
                                     <constraint firstAttribute="trailing" secondItem="dFO-Nj-GdJ" secondAttribute="trailing" constant="20" id="8gO-XG-o2y"/>
                                     <constraint firstItem="dFO-Nj-GdJ" firstAttribute="leading" secondItem="yZ8-f5-IPm" secondAttribute="leading" constant="20" id="CFT-NC-mra"/>
-                                    <constraint firstAttribute="bottom" secondItem="dFO-Nj-GdJ" secondAttribute="bottom" constant="10" id="rdT-xE-5si"/>
+                                    <constraint firstAttribute="bottom" secondItem="dFO-Nj-GdJ" secondAttribute="bottom" constant="20" id="rdT-xE-5si"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mhW-Xh-2sw">
@@ -79,9 +79,11 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="leftIconImageView" destination="mhW-Xh-2sw" id="iv6-nU-ijf"/>
+                <outlet property="leftSpaceConstraint" destination="Ijv-Xk-uYP" id="YZZ-nv-fw8"/>
                 <outlet property="messageLabel" destination="dFO-Nj-GdJ" id="2r1-T5-Dem"/>
                 <outlet property="messageView" destination="yZ8-f5-IPm" id="KcU-FC-9Av"/>
                 <outlet property="rightIconImageView" destination="FbX-Xa-1uz" id="YW4-la-lVL"/>
+                <outlet property="rightSpaceConstraint" destination="T9J-st-h9S" id="85T-t9-WJu"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="136.60714285714286"/>
         </tableViewCell>

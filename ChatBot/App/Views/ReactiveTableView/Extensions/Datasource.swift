@@ -29,7 +29,7 @@ extension ReactiveTableView: UITableViewDataSource {
         case let .ChatMessageItem(title: _, chatMessageData: chatMessageData):
             let cell = tableView.dequeueReusableCell(withIdentifier: ReactiveTableView.ChatMessageCellID, for: indexPath) as! ChatMessageCell
             cell.configure(chatMessageData: chatMessageData)
-            
+
             return cell
             
         case let .ChatRoomItem(title: _, chatRoom: chatRoom):
