@@ -12,6 +12,9 @@ class ChatBot: User {
     
     // MARK: Attributes
     
+    /**
+        A collection of dummy texts
+     */
     private static let texts = [
         "Hey! How are you doing? :)",
         "Do you want play tennis next sunday?",
@@ -24,7 +27,13 @@ class ChatBot: User {
         "wow, this is amazing!"
     ]
     
+    /**
+        Texts copy we work with - used in order to make the ChatBot return a different text each time it sends a message to the chat room
+     */
     private var textsCopy = ChatBot.texts
+    /**
+        The timer specifies automatic ChatBot's messages to the chat room
+     */
     private var timer: Timer?
     private var messagData: ChatMessageData {
         return ChatMessageData(user: self, messageType: .text(randomText))
@@ -58,22 +67,34 @@ class ChatBot: User {
     
     // MARK: Logic
     
+    /**
+        Activates the chat bot to send some messages to the chat room in a way specified with the timer's scheduler
+     */
     func activate(chatRoom: ChatRoom) {
         self.chatRoom = chatRoom
         scheduleTimer()
     }
     
+    /**
+        Deactivates the chat bot by invalidating the timer that indicates messages sending and reseing the textCopy and currentMessagesCount values
+     */
     func deactivate() {
         timer?.invalidate()
         textsCopy = ChatBot.texts
+        currentMessagesCount = 0
     }
     
+    /**
+        Deactivates the chat bot and restarts the messages sending specified with the timer's scheduler
+     */
     func restart() {
         deactivate()
-        currentMessagesCount = 0
         scheduleTimer()
     }
     
+    /**
+        In a random time interval, each time, the scheduler sends a new random message that has not been sent yet until the chat bot has been activated
+     */
     private func scheduleTimer() {
         
         timer = Timer.scheduledTimer(withTimeInterval: randomInterval, repeats: false) { [weak self] timer in

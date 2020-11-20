@@ -5,6 +5,9 @@
 
 import UIKit
 
+/**
+    Presents the message inside the chat room
+ */
 class ChatMessageCell: UITableViewCell {
     
     @IBOutlet weak var messageView: UIView!

@@ -5,11 +5,17 @@
 
 import Foundation
 
+/**
+    This enum specifies the room types. Basically there are just to types: `one on one` and `one to many` aka `group conversation`. Each conversation should hold the room participants (users) and the room Id to let the app know about the room.
+ */
 enum ChatRoomType {
     
     case oneOnOne(users: [User], roomId: String)
     case oneToMany(users: [User], roomId: String)
     
+    /**
+        Each room type may have its own predefined title that might be presented in a navigation bar.
+     */
     var title: String {
         switch self {
         case .oneOnOne:
@@ -19,6 +25,9 @@ enum ChatRoomType {
         }
     }
     
+    /**
+        A unique identifier getter
+     */
     var id: String {
         switch self {
         case let .oneOnOne(_, id):
@@ -28,6 +37,9 @@ enum ChatRoomType {
         }
     }
     
+    /**
+        Room users getter
+     */
     var users: [User] {
         switch self {
         case let .oneOnOne(users, _):
@@ -38,6 +50,9 @@ enum ChatRoomType {
     }
 }
 
+/**
+    Hashable lets the room type be comparable
+ */
 extension ChatRoomType: Hashable {
     
     public static func == (lhs: ChatRoomType, rhs: ChatRoomType) -> Bool {

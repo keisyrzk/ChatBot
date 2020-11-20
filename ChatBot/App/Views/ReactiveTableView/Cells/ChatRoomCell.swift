@@ -5,6 +5,9 @@
 
 import UIKit
 
+/**
+    Presents a room with the latest room's message
+ */
 class ChatRoomCell: UITableViewCell {
 
     @IBOutlet weak var roomNameLabel: UILabel!
@@ -29,12 +32,12 @@ class ChatRoomCell: UITableViewCell {
             }
             
             let usersCount = chatRoom.roomType.users.count
-            if usersCount > 2 {
+            if usersCount > 2 { //group chat
                 self.iconImageView.image = UIImage(systemName: "person.3.fill")?.withRenderingMode(.alwaysTemplate)
                 self.iconImageView.tintColor = UIColor.orange
                 self.iconImageView.backgroundColor = UIColor.darkGray
             }
-            else {
+            else {  //one on one chat
                 self.iconImageView.image = chatRoom.roomType.users.filter{ $0.isMe == false }.first?.image
             }
     

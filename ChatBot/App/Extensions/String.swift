@@ -7,6 +7,9 @@ import Foundation
 
 extension String {
     
+    /**
+        Generates a random alphanumeric string to use as a unique identifier
+     */
    static func randomAlphanumeric(length: Int = 10) -> String {
         
         let alphanumeric : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"

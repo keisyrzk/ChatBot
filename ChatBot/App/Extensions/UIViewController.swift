@@ -7,6 +7,9 @@ import UIKit
 
 extension UIViewController {
     
+    /**
+        Keyboard appearance handler
+     */
     func setupKeyboard() {
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
