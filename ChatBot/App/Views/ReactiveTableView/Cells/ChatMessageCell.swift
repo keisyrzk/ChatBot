@@ -7,7 +7,7 @@ import UIKit
 
 class ChatMessageCell: UITableViewCell {
 
-    @IBOutlet weak var messageView: UIView!
+    @IBOutlet weak var messageView: ChatBubbleView!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var leftIconImageView: UIImageView!
     @IBOutlet weak var rightIconImageView: UIImageView!
@@ -16,26 +16,27 @@ class ChatMessageCell: UITableViewCell {
         
         selectionStyle = .none
         
-        DispatchQueue.main.async {
-            
+        messageView.backgroundColor = UIColor.clear
+        
             if chatMessageData.user.isMe {
-                self.leftIconImageView.isHidden = true
-                self.rightIconImageView.layer.cornerRadius = self.rightIconImageView.frame.height/2
-                self.rightIconImageView.image = chatMessageData.user.image
+                messageView.isIncoming = false
+                leftIconImageView.isHidden = true
+                rightIconImageView.layer.cornerRadius = rightIconImageView.frame.height/2
+                rightIconImageView.image = chatMessageData.user.image
             }
             else {
-                self.rightIconImageView.isHidden = true
-                self.leftIconImageView.layer.cornerRadius = self.leftIconImageView.frame.height/2
-                self.leftIconImageView.image = chatMessageData.user.image
+                messageView.isIncoming = true
+                rightIconImageView.isHidden = true
+                leftIconImageView.layer.cornerRadius = leftIconImageView.frame.height/2
+                leftIconImageView.image = chatMessageData.user.image
             }
             
             switch chatMessageData.messageType {
             case let .text(text):
-                self.messageLabel.text = "[\(chatMessageData.user.name)]\n\(text)"
+                messageLabel.text = "[\(chatMessageData.user.name)]\n\(text)"
             }
             
-            self.layoutIfNeeded()
-        }
+            layoutIfNeeded()
     }
     
     override func prepareForReuse() {
