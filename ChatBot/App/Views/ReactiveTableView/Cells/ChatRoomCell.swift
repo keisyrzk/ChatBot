@@ -44,6 +44,9 @@ class ChatRoomCell: UITableViewCell {
             self.iconImageView.layer.cornerRadius = self.iconImageView.frame.height/2
         }
         
+        /**
+            Observe messages receiving and update the cell with the latest message rom this certain room
+         */
         ChatServices.shared.didReceiveMessage
             .sink { [weak self] (room) in
                 if chatRoom.id == room.id {
